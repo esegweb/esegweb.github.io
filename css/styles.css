@@ -207,8 +207,7 @@ Relative Position: elements are subject to the element before it in the DOM, BUT
 	height: auto;  /*height will depend on the child-elements inside of it */
 	max-width: none;
 	min-width: 100%;
-	border-style: solid;
-	border-color: dimgrey;
+
 
 }
 

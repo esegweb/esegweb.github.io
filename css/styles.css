@@ -1,0 +1,455 @@
+/*
+Absolute Position: elements with this positioning is impervious to the layout of the page
+Relative Position: elements are subject to the element before it in the DOM, BUT like
+				   absolute position, can use top and left to move around.
+ */
+
+*{
+	margin: 0px;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url('Raleway Thin.otf');
+	src: local("");
+}
+
+.jumbo-header-container { /*container to hold header, it's containers, and the image */
+	display: block;
+	position: relative;
+	margin-top: 0;
+	margin-left: 0;
+
+	height: 790px;
+	width: 100%;
+	max-width: none;
+	min-width: 100%;
+	z-index: 0;
+
+
+	background-image: url(../images/nyc.png);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+
+
+	 /* Good browsers */
+   opacity: .75;
+
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+
+  /* Netscape */
+  -moz-opacity: 0.75;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.75;
+
+}
+
+ #img1 { /* the image that is posted above */
+ 	position: relative;
+	max-width: 100%;
+    height: auto;
+    width: 100%;
+    width: auto\9; /* ie8 */
+    z-index: -10;
+
+    /* Good browsers */
+   opacity: .75;
+
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+
+  /* Netscape */
+  -moz-opacity: 0.75;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.75;
+
+ }
+
+ .header-container { /*This holds both the logo/name of the company, as well as the header items (e.g. HOME) */
+  	display: inline-flex;
+  	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex; 	
+  	flex-direction: row;
+
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: 10;
+
+
+  	width: 100%;
+  	height: 12%;
+  	font-family: 'Raleway', sans-serif;
+
+  	background: rgba(255,255,255,0.3);
+}
+
+ .logo-container { /* This is within the header container, this is where the name of company is placed */
+ 	position: relative;
+
+ 	/*top: 9%;
+ 	left: 5%;*/
+
+ 	font-family: 'Raleway', sans-serif; /*Taken from google fonts */
+ 	font-size: 45px;
+ 	font-weight: 500;
+ 	color: floralwhite;
+ 	margin-left: 5%;
+ 	margin-top: 1.5%;
+
+ }
+
+ .header-items { /*this is the container that contains the header-items/li a items 
+ 				WITHIN the header-container*/ 
+ 	position: relative;
+ 	margin-left: 18%;
+ 	margin-top: 3%;
+ 	width:100%;
+
+
+	font-family: 'Raleway', sans-serif;
+ 	font-size: 16px;
+ 	font-weight: 500;
+ 	color: floralwhite;
+
+
+ }
+
+.header-items li {
+	list-style: none;
+	display: inline;
+
+
+	}
+
+.header-items li a{ 	/*Holds the actual items HOME ABOUT etc.. */
+	text-decoration: none;
+	color: white;
+	padding-left: 5%;
+}
+
+.header-items li a:hover {
+	color: green;
+}
+
+
+
+/*
+.header-container2 {
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50deg, -50deg); IE 9 
+    -webkit-transform: translate(-50deg, -50deg);  Chrome, Safari, Opera 
+    transform: translate(-50deg, -50deg);
+
+    width: 100%;
+    font-weight: 700;
+
+
+}
+
+.header-container2-item {
+	font-family: 'Raleway', sans-serif;
+	font-size: 50px;
+	color: whitesmoke; /*maybe try green? 
+	font-weight: 200;
+	text-align: center;
+
+}
+*/
+
+.header-container3 { /* Renewable Energy For the Future */
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50deg, -50deg); /* IE 9 */
+    -webkit-transform: translate(-50deg, -50deg); /* Chrome, Safari, Opera */
+    transform: translate(-50deg, -50deg);
+
+}
+
+.header-container3-item {
+	font-family: 'Raleway', sans-serif;
+	font-size: 50px;
+	color: rgb(255,255,240);
+	font-weight: 200;
+	text-align: center;
+}
+/* The code below takes place AFTER intro image/header   */
+.jumbo-body-container { /* This will hold all of the items related to Information, BODY etc... */
+	display:flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;
+	flex-direction: row;
+	position: relative;
+
+	width: 100%;	/* */
+	height: auto;  /*height will depend on the child-elements inside of it */
+	max-width: none;
+	min-width: 100%;
+	border-style: solid;
+	border-color: dimgrey;
+
+}
+
+
+.left-column{
+	position: relative;
+	display: block;
+	width: 50%;
+	height: 550px;
+
+}
+
+.right-column{
+	position: relative;
+	display: block;
+	width:50%;
+	height: 550px;
+}
+
+.left-column-item1{
+	display: inline-block;
+	position: relative;
+	width: 500px;
+	margin-left: 66%;
+	/*top: 35%;*/
+	margin-top: 30%;
+	
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50deg, -50deg); IE 9 
+    -webkit-transform: translate(-50deg, -50deg);  Chrome, Safari, Opera 
+    transform: translate(-50deg, -50deg);
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: /*rgb(157, 57, 57);*/ #c59d5f;
+}
+
+#img2 {
+	
+
+}
+
+.left-column-item2{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	margin-left: 5%;
+	
+
+	font-family:'Raleway', sans-serif;
+    font-size: 16px;
+    color: black;
+    line-height: 40px;
+
+
+}
+
+.right-column-item1{
+
+}
+
+#img3 { /*Image of the turbines, mustb replaced */
+	padding-right: 30px;
+	padding-top: 50px;
+
+}
+
+.image-break {
+	display: block;
+	width: 100%;
+	height: 200px;
+
+	background-image: url(../images/nyc.png);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+
+ 	 /* Good browsers */
+   opacity: .75;
+
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=75);
+
+  /* Netscape */
+  -moz-opacity: 0.75;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.75;
+
+}
+
+.jumbo-contact-container { /* A container for the entire about/contact messages */
+	display:block;
+	position: relative;
+	width:100%;
+	height: 500px;
+	background-color: black;
+
+
+}
+
+.contact-container {
+	display:block;
+	position: relative;
+	width: 100%;
+}
+
+.contact-container h4 {
+	position: relative;
+	font-family: 'Raleway', sans-serif;
+	font-size: 27px;
+	color: navajowhite;
+	padding-left: 45%;
+	padding-top: 5%;
+}
+
+.about-us-container {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+ .about-us {
+ 	display: inline-block;
+ 	position: relative;
+ 	font-family: 'Raleway', sans-serif;
+ 	color: white;
+
+ 	font-size: 18px;
+ 	height: auto; 
+ 	width: 50%;
+ 	text-align: center;
+ 	padding-left:25%;
+ 	padding-top: 3%;
+    letter-spacing: 1px;
+    line-height: 25px;
+
+
+}
+
+.contacts-container{ /*A container that holds the contact info at the bottom of the page*/
+	display: inline-block;
+	width:100%;
+	height:auto;
+
+	font-family: 'Raleway', sans-serif;
+ 	color: /*#DCDCDC*/ darkgrey;
+ 	font-size: 17px; 
+}
+
+.contact-item1 { /*Contact */
+	display: inline-block;
+ 	position: relative;
+	text-decoration: underline;
+
+ 	padding-top: 15%;
+ 	padding-left: 2%;
+ 	padding-right: 2%;
+ 	width: 10%;
+}
+
+.contact-item2 { /*Dakota's email*/
+	display: inline-block;
+ 	position: relative;
+
+
+ 	padding-top: 15%;
+ 	padding-left: 2%;
+ 	padding-right: 2%;
+ 	width: auto;
+ 	font-size: 15px;
+}
+.contact-item3{ /*Any additional contact information */
+	display: inline-block;
+ 	position: relative;
+
+ 	padding-top: 15%;
+ 	padding-left: 2%;
+ 	padding-right: 2%;
+ 	width: auto;
+ 	font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+Investors want to know what you're doing, who you are, how far you've gotten, and where you're going, with the last part needing the least detail.
+
+Some investors want to be introduced to the team first. Others like to see it in the context of the product. 
+
+the team backgrounds are the perfect fit for the problem you're solving, I'd lead with the product. 
+
+If the team is just solid all around, and the problem doesn't need specific skills, I'd lead with the team.
+
+Product description should be a) the problem you're solving and b) the interesting way you're solving it.
+
+Team description should be specific details that highlight your abilities: where you've worked (and what you worked on), where you went to school, notable things you've built, etc. Leave the adjectives out. You should also include the extended team here - any advisors and what they contribute.
+
+Follow with a description of your progress. Is your product built, are people using it, and are they paying for it? Are you adding users/customers at an increasing rate? If not, what is your strategy to start moving up and to the right? 
+
+And what's the opportunity? If you're creating a new space, I'd put this after your traction section. If you're penetrating an existing market, it might fit better before - set your goals, and then show how you're hitting them. But give a taste of what you're aiming for and how big the vision is.
+
+Put it in a deck and be concise. Reading executive summaries is a nuisance.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
